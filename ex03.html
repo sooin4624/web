@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"> <!--user-scalable=no" 사용-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>웹연습03</title>
+    <style></style>
+    <script></script>
+</head>
+<body>
+    <!-- 미디어 요소는 인라인 요소지만 태그를 넣을 수 있다. -->
+    <h2 class="tit">미디어요소</h2>
+    <h3>이미지 요소</h3>
+    <div>
+        <img src="https://placehold.it/300x200/333" alt="임시이미지">
+    </div>
+    <picture>
+     <!-- 반응형 웹사이트를 만들 경우 src 대신 srcset 사용 ,
+          크로스 미디어 -->
+        <source srcset="https://placehold.it/320x480/333" media="(max-width:767px)">
+        <source srcset="https://placehold.it/768x600/333" media="(min-width:768px)"> 
+        <img src="https://placehold.it/400x300/333" alt="임시이미지">
+    </picture>
+
+    <!--  최신 이미지 소스 출력(최신 브라우저) -->
+    <picture>
+        <source type="image/svg+xml" srcset="img1.svg"> 
+        <source type="image/webp" srcset="img1.webp">
+        <img src="img1.png" alt="이미지"> 
+    </picture>
+
+     <!-- 임시 링크 적용 -->
+    <h3>비디오 요소</h3> <!--크로스 브라우징-->
+    <video>
+        <source srcset="video1.webm" type="video/webm">
+        <source srcset="video1.ogv" type="video/ogg">
+        <source srcset="video1_m.mp4" type="video/mp4" media="(max-width:767px)"> <!-- 모바일-->
+        <source srcset="video1.mp4" type="video/mp4" media="(min-width:768px)">
+    </video>
+    <h3>오디오 요소</h3>
+    <audio> <!-- 크로스 브라우징-->
+        <source src="audio1.mp3" type="audio/mpeg" >
+        <source src="audio1.ogg" type="audio/ogg">
+        <source src="audio1.wav" tupe="audio/wav">
+    </audio>
+    <h3>외부 문서</h3>
+    <iframe src="ex02.html" frameborder="0" scrolling="no"></iframe>
+    <iframe width="1090" height="613" src="https://www.youtube.com/embed/zndvqTc4P9I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</body>
+</html>
